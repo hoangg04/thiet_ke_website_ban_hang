@@ -1,0 +1,27 @@
+header {
+	display: flex;
+	position: fixed;
+	top: 0;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	align-items: center;
+	width: 100%;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	height: 60px;
+	background-color: #E3E6F3;
+}
+
+@media (min-width: 768px) {
+	header {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+		justify-content: space-between;
+	}
+}
+.nav__bar{
+	background-color: #E3E6F3;
+}
+.nav__bar li{
+	height: 30px;
+	line-height: 30px;
+}
