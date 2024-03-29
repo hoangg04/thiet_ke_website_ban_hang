@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=\, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Detail product </title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/detail_page.css">
 </head>
+
 <body>
-	Detail product
+	<header></header>
+	<main>
+		<div class="picture">
+			<img src="" alt="">
+		</div>
+		<div class="wrapper">
+			<span class="minus">-</span>
+			<span class="num">01</span>
+			<span class="plus">+</span>
+		</div>
+	</main>
+	<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
+	<script src="../assets/js/Header.js"></script>
+	<script src="../assets/js/Footer.js"></script>
+	<script src="../assets/js/index.js"></script>
+	<script>
+		const plus = document.querySelector(".plus"),
+		 minus = document.querySelector(".minus"),
+		 num = document.querySelector(".num");
+		 let a = 1;
+		 plus.addEventListener("click", ()=>{
+		   a++;
+		   a = (a < 10) ? "0" + a : a;
+		   num.innerText = a;
+		 });
+		 minus.addEventListener("click", ()=>{
+		   if(a > 1){
+			 a--;
+			 a = (a < 10) ? "0" + a : a;
+			 num.innerText = a;
+		   }
+		 });
+	   </script>
 </body>
+
 </html>
