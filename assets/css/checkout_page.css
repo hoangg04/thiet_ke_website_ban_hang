@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    height: 50px;
+    background-color: #333;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    margin: 20px 60px;
+  }
+  
+  .box-1 {
+    width: 70%;
+  }
+  
+  .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .box-2 {
+    width: 30%;
+    padding: 20px;
+  }
+  
+  .products-list {
+    margin-left: 40px;
+    max-height: 80vh;
+    overflow-y: scroll;
+  }
+  
+  .product {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-box {
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+  }
+  
+  .checkout-item {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .discount-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .discount-box span {
+    margin-bottom: 10px;
+  }
+  
+  .discount-box .discount {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    outline: none;
+  }
+  
+  .checkout-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .total {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .pay {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #088178;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .product-image {
+    width: 150px;
+    padding: 20px;
+    border: #ccc 1px solid;
+    border-radius: 10px;
+  }
+  
+  .product-image > img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .product-details .detail-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .detail-2 p {
+    font-size: 20px;
+    font-weight: bold;
+  }

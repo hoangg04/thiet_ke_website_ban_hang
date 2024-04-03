@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shop page</title>
-</head>
-<body>
-	Shop page
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.flex {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			main{
+				display: flex;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="main">hello</main>
+		<script>
+			const products = [
+				{
+					id: 1001,
+					title: "iphone 15",
+					price: 1500.99,
+					previousPrice: 1600.99,
+					description:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+					category: "phone",
+					image: "https://i.ibb.co/p3s01cP/iphone15.jpg",
+					isNew: true,
+					brand: "Apple",
+					quantity: 1,
+				},
+				{
+					id: 1002,
+					title: "iphone 14",
+					price: 1150.99,
+					previousPrice: 1240.99,
+					description:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+					category: "phone",
+					image: "https://i.ibb.co/HD4JCrk/iphone2.jpg",
+					isNew: true,
+					brand: "Apple",
+					quantity: 1,
+				},
+				{
+					id: 1003,
+					title: "iphone New",
+					price: 1100,
+					previousPrice: 1200,
+					description:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+					category: "phone",
+					image: "https://i.ibb.co/51LfwZ3/iphone3.jpg",
+					isNew: true,
+					brand: "Apple",
+					quantity: 1,
+				},
+				{
+					id: 1004,
+					title: "iphone 15 pro",
+					price: 1800.5,
+					previousPrice: 1900.99,
+					description:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+					category: "phone",
+					image: "https://i.ibb.co/F4VHfPJ/iphone4.jpg",
+					isNew: true,
+					brand: "Apple",
+					quantity: 1,
+				},
+				{
+					id: 1005,
+					title: "iphone SE",
+					price: 1725.99,
+					previousPrice: 1785.99,
+					description:
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+					category: "phone",
+					image: "https://i.ibb.co/hCqWjvQ/iphone5.jpg",
+					isNew: true,
+					brand: "Apple",
+					quantity: 1,
+				},
+			];
+
+			const main = document.querySelector("main");
+			console.log(main);
+			main.innerHTML = `
+				${products.map((product, index) => {
+					return `
+						<div class="flex">
+							<h2>${product.title}</h2>
+							<img src="${product.image}" alt="${product.title}" />
+							<p>${product.price}</p>
+							<p>${product.brand}</p>
+							<p>${product.quantity}</p>
+						</div>
+					`;
+				}).join("\n")}
+			`;
+		</script>
+	</body>
 </html>
