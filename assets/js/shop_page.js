@@ -1,6 +1,6 @@
 let thisPage =1 ;
 let limit=12;
-let list = document.querySelectorAll('.content2 .background');
+let list = document.querySelectorAll('.content1 .content2');
 function loadItem (){
     let beginGet = limit * (thisPage - 1);
     let endGet = limit * thisPage - 1;
@@ -34,7 +34,7 @@ function listPage(){
     } 
     if(thisPage != count){
         let next = document.createElement('li');
-        next.innerText='NEXT';
+        next.innerHTML='NEXT';
         next.setAttribute('onclick',"changePage("+(thisPage +1)+")");
         document.querySelector('.listPage').appendChild(next);
     }
