@@ -1,7 +1,7 @@
 #introduce img {
    padding-top: 50px;
    margin: 0 ;
-   width: 10000px;
+   width: 5500px;
    height: 700px;
 }
 
@@ -28,6 +28,3 @@
 }
 
 
-#fp table 1 a:hover{
-    background: #000;
-}
