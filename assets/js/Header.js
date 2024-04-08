@@ -16,6 +16,7 @@ function Header() {
         href="/#/"
       >
         <img
+
           src="${window.location.origin}/assets/images/logo.png"
           alt="test"
         />

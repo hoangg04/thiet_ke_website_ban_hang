@@ -34,6 +34,7 @@ function Footer() {
 
               <form action="#" class="flex flex-wrap gap-4">
 								<div class="h-12 border-[#ced4da] border rounded-lg overflow-hidden w-[246px] flex-grow-0 flex-shrink-0">
+
 									<input type="text" class="w-full py-2 outline-none text-[#212529] px-3 h-full" placeholder="Enter your name">
 								</div>
 								<div class="h-12 border-[#ced4da] border rounded-lg overflow-hidden w-[246px] flex-grow-0 flex-shrink-0">
