@@ -6,56 +6,71 @@
 .main_content{
     margin: 0px 55px;
 }
-.form_main{
-    margin: 100px 0px;
-}
-.form_main_1{
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around;
-  margin-bottom: 12px;
+.form1,.form2,.form3,.form4,.form5{
+    background-color: #e3e6f3;
+    height: 49px;
+    border-radius: 8px;
   }
-.form{
-    border:1px solid #e3e6f3;
-    border-radius: 5px;
-    background-color: #e3e6f3;
+.label{
+    margin: 0px 30px;
 }
-label{
-    background-color: #e3e6f3;
-    padding: 0px 60px 0px 18px;
-}
-select {
-    width: 190px;
-    padding: 12.5px 20px;
+.select {
+    width: 250px;
+    padding: 12px 0px;
+    margin-left: 1.5px;
     border: 1px solid #e3e6f3;
-    border-radius:0px 4px 4px 0px;
+    border-radius:0px 8px 8px 0px;
+    
   }
+
   input[type=text] {
-    width: 358px;
+    width: 404px;
     box-sizing: border-box;
     border : 1px solid #e3e6f3;
-    padding: 12px 20px 12px 40px;
-    border-radius:0px 4px 4px 0px;
+    padding: 11.5px 0px;
+    margin-left: 1px;
+    border-radius:0px 8px 8px 0px;
   }
-  input[type=number] {
-    width: 358px;
+  .min{
+    width: 304px;
     box-sizing: border-box;
     border : 1px solid #e3e6f3;
-    padding: 12px 20px 12px 40px;
-    border-radius:0px 4px 4px 0px;
+    padding: 11.5px 0px;
+    border-radius:0px 8px 8px 0px;
+  }
+  .max{
+    width: 350px;
+    box-sizing: border-box;
+    border : 1px solid #e3e6f3;
+    padding: 11.5px 0px;
+    border-radius:0px 8px 8px 0px;
+    margin-left: 20px;
   }
   input[type=submit] {
     background-color: #088178;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 7px;
     cursor: pointer;
   }
   input[type=submit]:hover {
     background-color: #04AA6D;
   }
- 
+  .form1 {grid-area: form1;}
+  .form2 {grid-area: form2;}
+  .form3 {grid-area: form3;}
+  .form4 {grid-area: form4;}
+  .form5 {grid-area: form5;}
+  .form6 {grid-area: form6;}
+  .form_main{
+    margin: 90px 0px;
+    display: grid;
+    grid-template-areas: 
+    'form1 form1 form1 form2 form2 form2 form3 form3 form3'
+    'form4 form4 form4 form4 form5 form5 form5 form5 form6';
+    gap:10px;
+  }
 .title{
     font-weight: bold;
     font-size: x-large;
@@ -98,7 +113,7 @@ select {
     border-radius: 15px;
 }
 .content_swap{
-    width: 400px;
+    width: 100px;
  }
 .circle{
     
@@ -135,4 +150,134 @@ select {
 .listPage .active{
     background-color: #088178;
     color: #ffffff;
+}
+@media (max-width:960px) {
+    .form_main{
+        grid-template-areas: 
+        'form1 form1 form2 form2'
+        'form3 form3 form4 form4'
+        'form5 form5 form5 form6';
+    }
+    .select{
+        width: 280px;
+        margin-left: 14.5px;
+    }
+    .min{
+        width: 280px;
+        margin-left: 13px;
+    }
+    .max{
+        width: 248px;
+    }
+    input[type=text] {
+        width:550px;
+        margin-left: 9.5px;
+    }
+    .content1{
+       margin: 0px 70px;
+       grid-template-columns:36% 36%; 
+    }
+    .listPage{
+        margin: 60px;
+    }
+}
+@media (max-width:724px) {
+    .form_main{
+        grid-template-areas: 
+        'form1'
+        'form2'
+        'form3'
+        'form4'
+        'form5'
+        'form6';
+        padding: 50px 0px;
+        margin:0px 20px;
+        width: 500px;
+    }
+    .label{
+        margin-left: px;
+    }
+    .select{
+        width: 340px;
+        margin-left: 31px;
+    }
+    #Status{
+        
+        margin-left: 52px;
+    }
+    .min{
+        width: 340px;
+        margin-left: 29px;
+    }
+    .max{
+        width: 340px;
+        margin-left: 26px;
+    }
+    input[type=text]{
+        width:320px;
+        margin-left: 1px;
+    }
+    .content{
+        margin-left: -70px;
+    }
+    .content1{
+        grid-template-columns: 29% 29%;
+    }
+}
+@media (max-width:354px) {
+    .main_content{
+        margin:0px 20px;
+    }
+    .form_main{
+        grid-template-areas: 
+        'form1'
+        'form2'
+        'form3'
+        'form4'
+        'form5'
+        'form6';
+        margin-left: 5px;
+    }
+    .form1,.form2,.form3,.form4,.form5{
+        background-color: #ffffff;
+        
+    }
+    label{
+        opacity: 0;
+    }
+    .select{
+        width: 300px;
+        margin-left: -130px;
+        border-radius: 8px;
+    }
+    #Status{
+        margin-left: -110px;
+    }
+    .min{
+        width: 300px;
+        margin-left: -132px;
+        border-radius: 8px;
+    }
+    .max{
+        width: 300px;
+        margin-left: -134px;
+        border-radius: 8px;
+    }
+    input[type=text]{
+        width: 300px;
+        margin-left: -180px;
+        border-radius: 8px;
+    }
+    .content1{
+        grid-template-columns: 25%;
+        margin-left: 70px;
+    }
+    .listPage{
+        margin-left: -10px;
+        margin-top: 650px;
+    }
+    .listPage li{
+        padding: 4px 7.5px;
+        margin: 0px 1px;
+    }
 }
