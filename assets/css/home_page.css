@@ -1,0 +1,30 @@
+#introduce img {
+   padding-top: 50px;
+   margin: 0 ;
+   width: 5500px;
+   height: 700px;
+}
+
+
+#introduce h1 {
+    position: absolute;
+    top:200px ;
+    left: 100px;
+    line-height: 50px;
+}
+
+#introduce h1 a {
+    background-color:rgb(4, 121, 111) ;
+    color: white;
+}
+
+#introduce b {
+    color:rgb(4, 121, 111);
+    font-size: 70px;
+}
+#introduce mark {
+    background:white;
+   
+}
+
+
