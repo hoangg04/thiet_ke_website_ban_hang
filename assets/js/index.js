@@ -27,3 +27,38 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		}
 	});
 });
+
+const productsContainer =document.querySelector(".main_content");
+console.log(productsContainer);
+const API ="https://product-api-qngh.onrender.com/products";
+async function fetchandDisplayData(){
+	try{
+		const respone = await fetch(API);
+		const data = await respone.json();
+		console.log(data);
+		displayData(data);
+	}catch(err){
+		console.log("!!!!!!!!!!",err)
+	}
+}
+fetchandDisplayData();
+function displayData(data){
+	data.forEach((product) => {
+		const productTemplate=`
+		<div class="product">
+						<div class="background" style="background-color:#088178;">
+							<img class="image" src="${product.image}" alt="sản phẩm"
+								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
+							<p style="color: white;margin:10px 12px;">${product.title}</p>
+							<p><span
+									style="text-decoration: line-through;color: white; margin: 10px 12px;">${product.price}</span></p>
+							<div class="content_swap" style="margin: 12px;">
+								<div class="circle"></div>
+								<div class="nd">Apple</div>
+							</div>
+							<a href="detail_product.html?id=${product.id}">view detail</a>
+						</div>
+		`;
+		productsContainer.insertAdjacentHTML('beforeend',productTemplate); 
+	});
+};
