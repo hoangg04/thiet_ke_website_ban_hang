@@ -7,14 +7,17 @@
     margin: 0px 55px;
 }
 .form1,.form2,.form3,.form4,.form5{
+    display: flex;
     background-color: #e3e6f3;
     height: 49px;
     border-radius: 8px;
   }
 .label{
-    margin: 0px 30px;
+    margin: 10px 30px;
+    
 }
 .select {
+    flex: 1 1 0;
     width: 250px;
     padding: 12px 0px;
     margin-left: 1.5px;
@@ -24,25 +27,28 @@
   }
 
   input[type=text] {
+    flex: 1 1 0;
     width: 404px;
     box-sizing: border-box;
     border : 1px solid #e3e6f3;
-    padding: 11.5px 0px;
+    padding: 11.5px 20px;
     margin-left: 1px;
     border-radius:0px 8px 8px 0px;
   }
   .min{
+    flex: 1 1 0;
     width: 304px;
     box-sizing: border-box;
     border : 1px solid #e3e6f3;
-    padding: 11.5px 0px;
+    padding: 11.5px 20px;
     border-radius:0px 8px 8px 0px;
   }
   .max{
+    flex: 1 1 0;
     width: 350px;
     box-sizing: border-box;
     border : 1px solid #e3e6f3;
-    padding: 11.5px 0px;
+    padding: 11.5px 20px;
     border-radius:0px 8px 8px 0px;
     margin-left: 20px;
   }
@@ -127,13 +133,18 @@
     text-align: center;
  }
  .content{
-    width: 1190px;
     margin: 100px auto 0;
  }
  .content1{
     display: grid;
-    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
-    gap: 1%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+ }
+ .content2{
+    display: flex !important;
+    justify-content: center;
  }
 .listPage{
     padding: 10px;
@@ -152,6 +163,9 @@
     color: #ffffff;
 }
 @media (max-width:960px) {
+    .background1{
+        width: 100%;
+    }
     .form_main{
         grid-template-areas: 
         'form1 form1 form2 form2'
@@ -173,15 +187,18 @@
         width:550px;
         margin-left: 9.5px;
     }
-    .content1{
+    /* .content1{
        margin: 0px 70px;
        grid-template-columns:36% 36%; 
-    }
+    } */
     .listPage{
         margin: 60px;
     }
 }
 @media (max-width:724px) {
+    .background1{
+        width: 100%;
+    }
     .form_main{
         grid-template-areas: 
         'form1'
@@ -217,14 +234,18 @@
         width:320px;
         margin-left: 1px;
     }
-    .content{
+
+    /* .content{
         margin-left: -70px;
-    }
-    .content1{
+    } */
+    /* .content1{
         grid-template-columns: 29% 29%;
-    }
+    } */
 }
 @media (max-width:354px) {
+    .background1{
+        width: 100%;
+    }
     .main_content{
         margin:0px 20px;
     }
