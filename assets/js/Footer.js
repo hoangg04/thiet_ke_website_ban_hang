@@ -24,7 +24,7 @@ function Footer() {
               <h3 class="mb-3 flex items-center">
                 <span class="mr-3"
                   ><img
-                    src="./assets/images/envelope-outline.svg"
+                    src="${window.location.origin}/assets/images/envelope-outline.svg"
                     alt="Image"
                     class="img-fluid" /></span
                 ><span class="text-md font-semibold text-green-active"
@@ -34,10 +34,11 @@ function Footer() {
 
               <form action="#" class="flex flex-wrap gap-4">
 								<div class="h-12 border-[#ced4da] border rounded-lg overflow-hidden w-[246px] flex-grow-0 flex-shrink-0">
-									<input type="text" class="w-full py-2 outline-none text-[#212529] px-3 h-full form-control" placeholder="Enter your name">
+
+									<input type="text" class="w-full py-2 outline-none text-[#212529] px-3 h-full" placeholder="Enter your name">
 								</div>
 								<div class="h-12 border-[#ced4da] border rounded-lg overflow-hidden w-[246px] flex-grow-0 flex-shrink-0">
-									<input type="text" class="w-full py-2 outline-none text-[#212529] px-3 h-full form-control" placeholder="Enter your email">
+									<input type="text" class="w-full py-2 outline-none text-[#212529] px-3 h-full" placeholder="Enter your email">
 								</div>
                 
                 <div class="h-12">
@@ -62,7 +63,7 @@ function Footer() {
                 class="flex h-full flex-shrink-0 flex-grow-0 items-center justify-start"
                 href="/src/#"
               >
-                <img src="./assets/images/logo.png" alt="logo" />
+                <img src="${window.location.origin}/assets/images/logo.png" alt="logo" />
               </a>
             </div>
             <p class="text-md mb-6 text-[#6a6a6a]">

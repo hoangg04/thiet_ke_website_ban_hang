@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/form.css" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div
+				class="mx-auto mt-[60px] flex max-w-2xl items-center justify-center overflow-hidden rounded-lg bg-white px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+			>
+				<div class="w-full p-8 lg:w-1/2">
+					<h2 class="text-center text-2xl font-semibold text-green-active">Login</h2>
+					<form id="form-login">
+						<div class="form-group group mb-4 flex flex-col">
+							<label for="username" class="form-label">Email</label>
+							<input
+								type="text"
+								id="email"
+								name="email"
+								class="form-control"
+								rules="required|email"
+							/>
+							<span class="form-message"></span>
+						</div>
+						<div class="form-group group mb-4 flex flex-col">
+							<label for="password" class="form-label">Password</label>
+							<input
+								type="password"
+								id="password"
+								class="form-control"
+								name="password"
+								rules="required|min:6|max:30|password"
+							/>
+							<span class="form-message"></span>
+						</div>
+						<div class="mt-8">
+							<button
+								class="w-full rounded bg-green-active px-4 py-2 text-md text-white hover:opacity-90 transition duration-300"
+								name="login"
+							>
+								Login
+							</button>
+						</div>
+					</form>
+					<div class="mt-4 flex items-center flex-col justify-center gap-3">
+						<a href="/#/oauth/sign-up" class="text-sm text-gray-500 el__match--route"
+							>or <span class="text-green-active">Sign up</span></a
+						>
+						<a href="/#/oauth/forgot" class="text-sm text-gray-500 el__match--route"
+							><span class="text-green-active">Forgot password</span></a
+						>
+					</div>
+				</div>
+			</div>
+			`;
+		</main>
+		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
+		<script src="../assets/js/Header.js"></script>
+		<script src="../assets/js/Footer.js"></script>
+		<script src="../assets/js/index.js"></script>
+		<script src="../assets/js/validator.js"></script>
+		<script>
+			const validate = new Validator("#form-login");
+			validate.validate();
+		</script>
+	</body>
+</html>
