@@ -44,18 +44,29 @@
 							/>
 							<span class="form-message"></span>
 						</div>
+						<div class="form-group group mb-4 flex flex-col">
+							<label for="password" class="form-label">Confirm password</label>
+							<input
+								type="password"
+								id="confirm_password"
+								class="form-control"
+								name="confirm_password"
+								rules="required|min:6|max:30|password|confirm"
+							/>
+							<span class="form-message"></span>
+						</div>
 						<div class="mt-8 ">
 							<button
 								class="w-full rounded bg-green-active form-submit text-md text-white hover:opacity-90 transition duration-300"
 								name="login"
 							>
-								Login
+								Sign Up
 							</button>
 						</div>
 					</form>
-					<div class="mt-4 flex items-center flex-col justify-center gap-3">
-						<a href="signup_page.html" class="text-sm text-gray-500 el__match--route"
-							>or <span class="text-green-active">Sign up</span></a
+					<div class="mt-4 flex items-center flex-col justify-center gap-3 ">
+						<a href="login_page.html" class="text-sm text-gray-500 el__match--route"
+							>or <span class="text-green-active">Login</span></a
 						>
 					</div>
 				</div>
