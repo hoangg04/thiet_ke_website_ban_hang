@@ -1,775 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shop page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/output.css" />
+		<link rel="stylesheet" href="/assets/css/shop_page.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shop page</title>
-
-
-
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<link rel="stylesheet" href="../assets/css/style.css">
-
-	<link rel="stylesheet" href="../assets/css/shop_page.css">
-</head>
-
-<body>
-	<header></header>
-	<main>
-		<div><img src="./assets/images/img_shop_page/background_shop_page.png" alt="background" width="100%"></div>
-		<div class="main_content">
-		    <div class="form_main"> 
-					<div class="form1">
-						<label for="Category" class="label">Category</label>
-						<select class="select" id="Category" name="Category">
-						  <option value="Choose category">Choose category</option>
-						  <option value="Accessories">Accessories</option>
-						  <option value="Phone">Phone</option>
-						  <option value="Phone case">Phone case</option>
-						  <option value="Watch">Watch</option>
+	<body>
+		<header></header>
+		<main>
+			<div>
+				<img
+					src="/assets/images/img_shop_page/background_shop_page.png"
+					alt="background"
+					width="100%"
+					class="background1"
+				/>
+			</div>
+			<div class="main_content">
+				<form
+					class="container mx-auto flex flex-col flex-wrap justify-center gap-3 px-6 pb-5 pt-[100px] filter md:flex-row md:items-center md:px-5 xl:max-w-[1200px]"
+					name="form-filter"
+				>
+					<div
+						class="item flex h-12 w-full items-center justify-start gap-3 overflow-hidden rounded-lg border border-[#ced4da] sm:min-w-[350px] md:flex-1 lg:w-1/4"
+					>
+						<label
+							for="category"
+							class="text-md hidden h-full w-[150px] flex-shrink-0 items-center bg-primary-light py-2 pl-3 sm:flex"
+							>Category</label
+						>
+						<select
+							name="category"
+							id="category"
+							class="h-full flex-1 px-3 outline-none sm:mr-3 sm:px-0"
+						>
+							<option value="">Choose category</option>
+							<option value="accessories" null="">Accessories</option>
+							<option value="phone" null="">Phone</option>
+							<option value="phone case" null="">Phone case</option>
+							<option value="watch" null="">Watch</option>
 						</select>
 					</div>
-					<div class="form2">
-						<label for="Status" class="label" >Status</label>
-						<select class="select" id="Status" name="Status" >
-						  <option value="Choose status">Choose status</option>
-						  <option value="New products">New products</option>
-						  <option value="Old proudcts">Old proudcts</option>
+					<div
+						class="item flex h-12 w-full items-center justify-start gap-3 overflow-hidden rounded-lg border border-[#ced4da] sm:min-w-[350px] md:flex-1 lg:w-1/4"
+					>
+						<label
+							for="Status"
+							class="text-md hidden h-full w-[150px] flex-shrink-0 items-center bg-primary-light py-2 pl-3 sm:flex"
+							>Status
+						</label>
+						<select
+							name="status"
+							id="status"
+							class="h-full flex-1 px-3 outline-none sm:mr-3 sm:px-0"
+						>
+							<option value="">Choose status</option>
+							<option value="true">New products</option>
+							<option value="false">Old products</option>
 						</select>
 					</div>
-					<div class="form3">
-						<label for="Search products" class="label">Min Price</label>
-						<input type="number" name="Min Price" placeholder="Min Price" class="min">
-					</div>
-			
-			
-					<div class="form4">
-						<label for="Search products"class="label">Max Price</label>
-						<input type="number" name="Max Price" placeholder="Max Price" class="max">
-					</div>
-					<div class="form5">
-						<label for="Search products" class="label">Search products</label>
-						<input type="text" name="Search products" placeholder="Search products" class="search">
-					</div>
-					<div class="form6">
-						<input type="submit" value="Search">
-					</div>
-				
-		    </div>
-		
-			<div class="title">
-				Customers also purchased
-			</div>
-			<!-- <div class="content">
-				<div class="content1">
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img class="image" src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-							<div href="detai.html">view detail</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img class="img" src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
 
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
+					<div
+						class="item flex h-12 w-full items-center justify-start gap-3 overflow-hidden rounded-lg border border-[#ced4da] sm:min-w-[350px] md:flex-1 lg:w-1/4"
+					>
+						<label
+							class="text-md hidden sm:flex h-full flex-shrink-0 items-center bg-primary-light px-3 py-2 sm:w-[150px] sm:pl-3 sm:pr-0"
+							for="minPrice"
+							>Min Price</label
+						>
 
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
+						<input
+							type="number"
+							name="minPrice"
+							class="w-full py-2 outline-none text-[#212529] flex-1 px-3 md:pl-0 md:pr-3 form-control"
+							placeholder="Min Price"
+							autocomplete=""
+							value=""
+						/>
+					</div>
+
+					<div
+						class="border border-[#ced4da] flex gap-3 h-12 item items-center justify-start lg:w-1/4 md:flex-1 overflow-hidden rounded-lg sm:min-w-[350px] w-full"
+					>
+						<label
+							class="text-md hidden sm:flex h-full flex-shrink-0 items-center bg-primary-light px-3 py-2 sm:w-[150px] sm:pl-3 sm:pr-0"
+							for="maxPrice"
+							>Max Price</label
+						>
+
+						<input
+							type="number"
+							name="maxPrice"
+							class="w-full py-2 outline-none text-[#212529] flex-1 px-3 md:pl-0 md:pr-3 form-control"
+							placeholder="Max Price"
+							autocomplete=""
+							value=""
+						/>
+					</div>
+
+					<div
+						class="border border-[#ced4da] flex gap-3 h-12 item items-center justify-start lg:w-1/4 md:flex-1 overflow-hidden rounded-lg sm:min-w-[350px] w-full"
+					>
+						<label
+							class="text-md hidden sm:flex h-full flex-shrink-0 items-center bg-primary-light px-3 py-2 sm:w-[150px] sm:pl-3 sm:pr-0"
+							for="search"
+							>Search products</label
+						>
+
+						<input
+							type="text"
+							name="search"
+							class="w-full py-2 outline-none text-[#212529] flex-1 px-3 md:pl-0 md:pr-3 form-control"
+							placeholder="Search products"
+							autocomplete=""
+							value=""
+						/>
+					</div>
+
+					<button
+						class="item submit flex h-full w-max flex-shrink-0 flex-grow-0 items-center justify-center rounded-lg bg-green-active px-7 py-3 text-white"
+					>
+						Search
+					</button>
+				</form>
+
+				<div class="title">Customers also purchased</div>
+				<div class="content">
+					<div class="content1">
+						Loading
+						<!-- <div class="content2">
+							<div class="background">
+								<img class="img" src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm" />
+								<p class="phonename">Iphone 15</p>
+								<p><span class="money">$1600.99</span> $1500.99</p>
+								<div class="content_swap">
+									<div class="circle"></div>
+									<div class="nd">Apple</div>
+								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
+				<nav
+					class="mt-10 pagination container mx-auto flex flex-row justify-center gap-3 px-6 items-center md:px-5 xl:max-w-[1200px]"
+					aria-label="Pagination"
+				>
+					<div class="isolate inline-flex h-10 gap-2 -space-x-px rounded-md">
+						<button
+							class=" prev-page relative flex h-10 w-10 items-center justify-center rounded-l-md px-2 py-2 text-dark"
+							
+						>
+							<span><img src="../assets/icons/back.svg" /></span>
+						</button>
+						<span
+							class="count-page text-md relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-md border-[2px] border-green-active font-semibold text-dark"
+							>1</span
+						>
+						<button
+							class="hover:bg-primary-light bg-white border-green-active border-[2px] next-page relative flex h-10 w-10 items-center justify-center rounded-r-md px-2 py-2 text-dark"
+						>
+							<span><img src="../assets/icons/next.svg" /></span>
+						</button>
+					</div>
+				</nav>
 			</div>
-			<div class="content">
-				<div class="content1">
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<div class="content1">
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="product">
-						<div class="background" style="background-color:#088178;">
-							<img src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm"
-								style="border-radius: 4%;margin: 12px;" width="266px" height="315.42px">
-							<p style="color: white;margin:10px 12px;">Iphone 15</p>
-							<p><span
-									style="text-decoration: line-through;color: white; margin: 10px 12px;">$1600.99</span>
-								$1500.99</p>
-							<div class="content_swap" style="margin: 12px;">
-
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/iphone3.jpg" alt="sản phẩm">
-							<p class="phonename">iphone 15</p>
-							<p><span class="money">$1950</span>
-								$1900.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/iphone4.jpg" alt="sản phẩm">
-							<p class="phonename">iphone 15</p>
-							<p><span class="money">$1100.99</span>
-								$1000.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/samsunggalaxy5.jpg" alt="sản phẩm">
-							<p class="phonename">Samsung Galaxy 5</p>
-							<p><span class="money">$620</span>
-								$500</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Samsung</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/apple-watch-ultra-1.jpg" alt="sản phẩm">
-							<p class="phonename">Apple Watch ultra</p>
-							<p><span class="money">$980.99</span>
-								$850.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/coros-apex-premium-multisport-1.jpg" alt="sản phẩm">
-							<p class="phonename">Coros Apex Premium</p>
-							<p><span class="money">$480</span>
-								$450</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Coros</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/apple-watch-se-1.jpg" alt="sản phẩm">
-							<p class="phonename">Apple Watch SE</p>
-							<p><span class="money">$1050</span>
-								$999.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div> 
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/apple-watch-series-8-1.jpg" alt="sản phẩm">
-							<p class="phonename">Apple Watch 8</p>
-							<p><span class="money">$860</span>
-								$850</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/apple-watch-series-7-1.jpg" alt="sản phẩm">
-							<p class="phonename">Apple Watch 7</p>
-							<p><span class="money">$800</span>
-								$780</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/fossil-gen-6-1.jpg" alt="sản phẩm">
-							<p class="phonename">Fossil Gen 6</p>
-							<p><span class="money">$1080</span>
-								$950</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Fossil</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/fossil-gen-6-leather-1.jpg" alt="sản phẩm">
-							<p class="phonename">Fossil Gen 6 Leather</p>
-							<p><span class="money">$1150.99</span>
-								$1100</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Fossil</div>
-							</div>
-						</div>
-					</div>
-			
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/google-fitbit-sense-2-1.jpg" alt="sản phẩm">
-							<p class="phonename">Google Fitbit</p>
-							<p><span class="money">$690</span>
-								$650.5</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Google</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/huawei-band-7-1.jpg" alt="sản phẩm">
-							<p class="phonename">Huawei 7</p>
-							<p><span class="money">$800</span>
-								$780</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Huawei</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/th (1).jpg" alt="sản phẩm">
-							<p class="phonename">AirPods 1</p>
-							<p><span class="money">$129</span>
-								$120</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/th.jpg" alt="sản phẩm">
-							<p class="phonename">AirPods 2</p>
-							<p><span class="money">$169</span>
-								$160</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/th (2).jpg" alt="sản phẩm">
-							<p class="phonename">AirPods Pro</p>
-							<p><span class="money">$249</span>
-								$240</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/th (3).jpg" alt="sản phẩm">
-							<p class="phonename">AirPods Max</p>
-							<p><span class="money">$549</span>
-								$540</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_131.png" alt="sản phẩm">
-							<p class="phonename">Galaxy Buds Pro</p>
-							<p><span class="money">$150.99</span>
-								$145.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Samsung</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_132.png" alt="sản phẩm">
-							<p class="phonename">Galaxy Buds FE</p>
-							<p><span class="money">$89.99</span>
-								$80.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Samsung</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_133.png" alt="sản phẩm">
-							<p class="phonename">Galaxy Buds2 Pro</p>
-							<p><span class="money">$209.99</span>
-								$200.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Samsung</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_134.png" alt="sản phẩm">
-							<p class="phonename">WF-1000XM5</p>
-							<p><span class="money">$298</span>
-								$290</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Sonny</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_135.png" alt="sản phẩm">
-							<p class="phonename">WF-1000XM3</p>
-							<p><span class="money">$111.58</span>
-								$100</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Sonny</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_136.png" alt="sản phẩm">
-							<p class="phonename">LinkBuds S</p>
-							<p><span class="money">$198</span>
-								$190</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Sonny</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_140.png" alt="sản phẩm">
-							<p class="phonename">Sonny Z1R</p>
-							<p><span class="money">$389</span>
-								$380</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Sonny</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_141.png" alt="sản phẩm">
-							<p class="phonename">Sony WH-1000XM5</p>
-							<p><span class="money">$398</span>
-								$390</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Sonny</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_137.png" alt="sản phẩm">
-							<p class="phonename">Ipad Pro</p>
-							<p><span class="money">$799</span>
-								$790</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_138.png" alt="sản phẩm">
-							<p class="phonename">Ipad Air</p>
-							<p><span class="money">$599</span>
-								$590</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/Screenshot_139.png" alt="sản phẩm">
-							<p class="phonename">Ipad Mini</p>
-							<p><span class="money">$499</span>
-								$490</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Apple</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-pattern-trandafiri-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Husa Pattern</p>
-							<p><span class="money">$55</span>
-								$50</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Trandafiri</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/artistic-2-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Artistic</p>
-							<p><span class="money">$85</span>
-								$75</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Artistic</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-sarpe2-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Husa Sarpe</p>
-							<p><span class="money">$48.5</span>
-								$45</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Trandafiri</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-pattern-frunze-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Husa Pattern Frunze</p>
-							<p><span class="money">$120</span>
-								$80</p>
-              
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Trandafiri</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-leu-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Husa Leu</p>
-							<p><span class="money">$65</span>
-								$60</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Unknown</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-marmura-2-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">White Lavish</p>
-							<p><span class="money">$105</span>
-								$80</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Lavish</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-caine-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Zigzag row</p>
-							<p><span class="money">$95</span>
-								$35</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Artistic</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-albinuta-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Albinuta</p>
-							<p><span class="money">$180</span>
-								$150.99</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Albibuta</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/alien-case-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Alien Case</p>
-							<p><span class="money">$125</span>
-								$115</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Unknown</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/animal-print-case-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Tiger Print</p>
-							<p><span class="money">$85</span>
-								$80</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Unknown</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-got-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Shield Pro</p>
-							<p><span class="money">$80</span>
-								$45</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Shield</div>
-							</div>
-						</div>
-					</div>
-				
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-army-b-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Husa Army</p>
-							<p><span class="money">$55</span>
-								$50</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Artistic</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-marmura-2-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">White Lavish</p>
-							<p><span class="money">$105</span>
-								$80</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Lavish</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/husa-joker2-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Joker Dream</p>
-							<p><span class="money">$55</span>
-								$50</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Joker</div>
-							</div>
-						</div>
-					</div>
-					<div class="content2">
-						<div class="background">
-							<img class="img" src="/assets/images/img_shop_page/phone-case-images-2-343x463-c.jpg" alt="sản phẩm">
-							<p class="phonename">Dramatic Arguments</p>
-							<p><span class="money">$90</span>
-								$75</p>
-							<div class="content_swap" >
-								<div class="circle"></div>
-								<div class="nd">Unknown</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<ul class="listPage">
-				<li class="active">1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-			</ul>
-		</div>
-	
-	</main>
-	<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
-	<script src="../assets/js/Header.js"></script>
-	<script src="../assets/js/Footer.js"></script>
-	<script src="../assets/js/index.js"></script>
-  <script src="../assets/js/shop_page.js"></script>
-</body>
-
+		</main>
+		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
+		<script src="../assets/js/shop_page.js"></script>
+		<script src="../assets/js/Header.js"></script>
+		<script src="../assets/js/Footer.js"></script>
+		<script src="../assets/js/index.js"></script>
+	</body>
 </html>

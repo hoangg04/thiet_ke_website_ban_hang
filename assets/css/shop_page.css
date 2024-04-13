@@ -1,109 +1,53 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-.main_content{
+
+.main_content {
     margin: 0px 55px;
 }
-.form1,.form2,.form3,.form4,.form5{
-    background-color: #e3e6f3;
-    height: 49px;
-    border-radius: 8px;
-  }
-.label{
-    margin: 0px 30px;
-}
-.select {
-    width: 250px;
-    padding: 12px 0px;
-    margin-left: 1.5px;
-    border: 1px solid #e3e6f3;
-    border-radius:0px 8px 8px 0px;
-    
-  }
 
-  input[type=text] {
-    width: 404px;
-    box-sizing: border-box;
-    border : 1px solid #e3e6f3;
-    padding: 11.5px 0px;
-    margin-left: 1px;
-    border-radius:0px 8px 8px 0px;
-  }
-  .min{
-    width: 304px;
-    box-sizing: border-box;
-    border : 1px solid #e3e6f3;
-    padding: 11.5px 0px;
-    border-radius:0px 8px 8px 0px;
-  }
-  .max{
-    width: 350px;
-    box-sizing: border-box;
-    border : 1px solid #e3e6f3;
-    padding: 11.5px 0px;
-    border-radius:0px 8px 8px 0px;
-    margin-left: 20px;
-  }
-  input[type=submit] {
-    background-color: #088178;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-  }
-  input[type=submit]:hover {
-    background-color: #04AA6D;
-  }
-  .form1 {grid-area: form1;}
-  .form2 {grid-area: form2;}
-  .form3 {grid-area: form3;}
-  .form4 {grid-area: form4;}
-  .form5 {grid-area: form5;}
-  .form6 {grid-area: form6;}
-  .form_main{
-    margin: 90px 0px;
-    display: grid;
-    grid-template-areas: 
-    'form1 form1 form1 form2 form2 form2 form3 form3 form3'
-    'form4 form4 form4 form4 form5 form5 form5 form5 form6';
-    gap:10px;
-  }
-.title{
+.title {
     font-weight: bold;
     font-size: x-large;
     margin-bottom: -10px;
     margin-left: 7px;
 }
-.background{
-    background-color:#088178;
+
+.background {
+    background-color: #088178;
     width: 290px;
     height: 453.42px;
     border-radius: 4%;
     padding-top: 1px;
-} 
-.img{
+}
+
+.img {
     width: 266px;
     height: 315.42px;
-    margin:12px;
+    margin: 12px;
     overflow: hidden;
     border-radius: 4%;
-    
-}
-.phonename{
-   color: white;
-   margin: 12px;
+
 }
 
+.phonename {
+    color: white;
+    margin: 12px;
+}
 
-.money{
+.content_swap {
+    margin: 12px;
+}
+
+.money {
     text-decoration: line-through;
     color: white;
     margin: 10px 12px;
 }
-.circle{
+
+.circle {
     width: 30px;
     height: 30px;
     background: pink;
@@ -111,174 +55,105 @@
     -webkit-border-radius: 15px;
     border-radius: 15px;
 }
-.content_swap{
+
+.content_swap {
     width: 100px;
- }
-.circle{
-    
-    width: 400px;
-    }
-.circle{
+}
+
+.circle {
     float: left;
     text-align: center;
- }
-.nd{
+}
+
+.nd {
     width: 55px;
     padding: 3.5px 7px;
     float: left;
     text-align: center;
- }
- .content{
-    width: 1190px;
+}
+
+.content {
     margin: 100px auto 0;
- }
- .content1{
+}
+
+.content1 {
     display: grid;
-    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
-    gap: 1%;
- }
-.listPage{
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+}
+
+.content2 {
+    display: flex !important;
+    justify-content: center;
+}
+
+.listPage {
     padding: 10px;
     text-align: center;
     list-style: none;
 }
-.listPage li{
+
+.listPage li {
     background-color: #ffffffBD;
-    padding:15px 20px;
+    padding: 15px 20px;
     display: inline-block;
-    margin: 100px  10px 0px;
+    margin: 100px 10px 0px;
     cursor: pointer;
 }
-.listPage .active{
+
+.listPage .active {
     background-color: #088178;
     color: #ffffff;
 }
+
+
+
+
 @media (max-width:960px) {
-    .form_main{
-        grid-template-areas: 
-        'form1 form1 form2 form2'
-        'form3 form3 form4 form4'
-        'form5 form5 form5 form6';
+    .background1 {
+        width: 100%;
     }
-    .select{
+
+
+    .select {
         width: 280px;
         margin-left: 14.5px;
     }
-    .min{
-        width: 280px;
-        margin-left: 13px;
-    }
-    .max{
-        width: 248px;
-    }
-    input[type=text] {
-        width:550px;
-        margin-left: 9.5px;
-    }
-    .content1{
-       margin: 0px 70px;
-       grid-template-columns:36% 36%; 
-    }
-    .listPage{
+
+    .listPage {
         margin: 60px;
     }
 }
+
 @media (max-width:724px) {
-    .form_main{
-        grid-template-areas: 
-        'form1'
-        'form2'
-        'form3'
-        'form4'
-        'form5'
-        'form6';
-        padding: 50px 0px;
-        margin:0px 20px;
-        width: 500px;
+    .background1 {
+        width: 100%;
     }
-    .label{
-        margin-left: px;
-    }
-    .select{
-        width: 340px;
-        margin-left: 31px;
-    }
-    #Status{
-        
-        margin-left: 52px;
-    }
-    .min{
-        width: 340px;
-        margin-left: 29px;
-    }
-    .max{
-        width: 340px;
-        margin-left: 26px;
-    }
-    input[type=text]{
-        width:320px;
-        margin-left: 1px;
-    }
-    .content{
-        margin-left: -70px;
-    }
-    .content1{
-        grid-template-columns: 29% 29%;
-    }
+
 }
+
 @media (max-width:354px) {
-    .main_content{
-        margin:0px 20px;
+    .background1 {
+        width: 100%;
     }
-    .form_main{
-        grid-template-areas: 
-        'form1'
-        'form2'
-        'form3'
-        'form4'
-        'form5'
-        'form6';
-        margin-left: 5px;
+
+    .main_content {
+        margin: 0px 20px;
     }
-    .form1,.form2,.form3,.form4,.form5{
-        background-color: #ffffff;
-        
-    }
-    label{
-        opacity: 0;
-    }
-    .select{
-        width: 300px;
-        margin-left: -130px;
-        border-radius: 8px;
-    }
-    #Status{
-        margin-left: -110px;
-    }
-    .min{
-        width: 300px;
-        margin-left: -132px;
-        border-radius: 8px;
-    }
-    .max{
-        width: 300px;
-        margin-left: -134px;
-        border-radius: 8px;
-    }
-    input[type=text]{
-        width: 300px;
-        margin-left: -180px;
-        border-radius: 8px;
-    }
-    .content1{
+
+    .content1 {
         grid-template-columns: 25%;
         margin-left: 70px;
     }
-    .listPage{
+
+    .listPage {
         margin-left: -10px;
         margin-top: 650px;
     }
-    .listPage li{
+
+    .listPage li {
         padding: 4px 7.5px;
         margin: 0px 1px;
     }
