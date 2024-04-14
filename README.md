@@ -3,6 +3,7 @@
 #### Nội dung trang web gồm:
 - Thiết kế trang home page , shop page , detail product, checkout
 - Api về điện thoại, đồng hồ thông minh , quần áo, mũ ,...
+- Gồm các trang chính là: Trang chủ, Cửa hàng, Chi tiết sản phẩm, Thanh toán sản phẩm , Trang người dùng
 #### Công nghệ sử dụng
 - HTML
 - CSS
@@ -18,6 +19,8 @@
 - Phân trang sản phẩm
 - Call api render giao diện
 - Toast thông báo
+#### Link sản phẩm cuối
+<a>https://bucolic-faun-453d36.netlify.app/</a>
 #### Thành viên trong nhóm
 - Đỗ Trọng Hoàng ( 2022604369 ) **( Nhóm trưởng )** : chịu trách nhiệm tạo api, xử lý js cho toàn bộ trang web , deploy sản phẩm
 - Lê Anh Tạo ( 2022605301 ) : Thiết kế trang shop page (xử lý html css ,reponsive )
