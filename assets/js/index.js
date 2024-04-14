@@ -1,5 +1,11 @@
 import { LocalStorage } from "./storage.js";
 import PreviewCart from "./PreviewCart.js";
+import {
+	doc,
+	updateDoc,
+	firestore,
+	getAuth,
+} from "./auth.js";
 document.addEventListener("DOMContentLoaded", function (e) {
 	if (!document.querySelector(".pop-up")) {
 		let popupEl = document.createElement("div");
@@ -10,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	let header = document.querySelector("header");
 	let preview_cart = document.querySelector(".preview_cart");
 	if (preview_cart) {
-		preview_cart.addEventListener("click", (e) => {
+		preview_cart.addEventListener("click",async (e) => {
+			const user = await getAuth().currentUser;
 			let userInfoStorage = LocalStorage("infor_user");
 			let btn_remove_item = e.target.closest(".btn__remove--item");
 			if (btn_remove_item) {
@@ -20,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 				if (index >= 0) {
 					data.products.splice(index, 1);
 					userInfoStorage.set("data", data);
+					await updateDoc(doc(firestore, "users/" + user.uid), {
+						data: JSON.stringify(userInfoStorage.get("data")),
+					});
 					preview_cart.innerHTML = PreviewCart();
 				}
 			}
@@ -49,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 				}
 			}
 		}
-		if (toggle_preview_cart) {
+		if (toggle_preview_cart && preview_cart) {
 			if (!preview_cart.classList.contains("hidden")) {
 				preview_cart.classList.remove("flex");
 				preview_cart.classList.add("hidden");
@@ -69,5 +79,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
 				preview_cart.classList.add("flex");
 			}
 		}
+
 	});
 });

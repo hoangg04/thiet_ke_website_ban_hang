@@ -1,7 +1,11 @@
 import { LocalStorage } from "./storage.js";
 function PreviewCart() {
 	let userInfoStorage = LocalStorage("infor_user");
-	let preview_data = userInfoStorage.get("data").products;
+	let preview_data = []
+	if(!userInfoStorage.isEmpty()){
+		preview_data = userInfoStorage.get("data").products;
+	}
+
 	let header = document.querySelector("header")
 	if(header.querySelector(".count_products")){
 		header.querySelector(".count_products").textContent = preview_data.length

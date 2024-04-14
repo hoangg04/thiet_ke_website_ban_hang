@@ -24,11 +24,6 @@ import Toast from "./toast.js";
 import { LocalStorage } from "./storage.js";
 import PreviewCart from "./PreviewCart.js";
 const validate = new Validator("#form-login");
-new Toast({
-	message: "Login successfully. Redirecting to home page...",
-	type: "success",
-	absoluteEl: document.querySelector(".pop-up"),
-}).init();
 validate.validate();
 validate.onSubmit = async function (data) {
 	let userInfoStorage = LocalStorage("infor_user");

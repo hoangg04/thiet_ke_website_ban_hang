@@ -1,6 +1,12 @@
 import { LocalStorage } from "./storage.js";
 import PreviewCart from "./PreviewCart.js";
 import Toast from "./toast.js";
+import {
+	doc,
+	updateDoc,
+	firestore,
+	getAuth,
+} from "./auth.js";
 function renderProduct(content, id) {
 	fetch(`https://product-api-qngh.onrender.com/products/${id}`, {
 		method: "GET",
@@ -169,6 +175,7 @@ window.addEventListener("DOMContentLoaded", () => {
 				if (!localStorage.getItem("infor_user")) {
 					throw new Error("Please login to continue");
 				}
+				const user = await getAuth().currentUser;
 				let userInfoStorage = LocalStorage("infor_user");
 				let data = null;
 				if (userInfoStorage.isEmpty()) {
@@ -191,6 +198,9 @@ window.addEventListener("DOMContentLoaded", () => {
 					});
 				}
 				userInfoStorage.set("data", data);
+				await updateDoc(doc(firestore, "users/" + user.uid), {
+					data: JSON.stringify(userInfoStorage.get("data")),
+				});
 				new Toast({
 					message: "Add product to cart sussecsfully",
 					type: "success",

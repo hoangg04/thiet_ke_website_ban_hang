@@ -68,8 +68,3 @@ export {
 	onAuthStateChanged,
 	updateProfile,
 };
-const validate = new Validator("#form-signup");
-validate.validate();
-validate.onSubmit = function(data){
-  console.log(data)
-}

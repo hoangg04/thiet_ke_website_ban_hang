@@ -1,28 +1,22 @@
 import {
-	getDoc,
-	StorageBucketRef,
+
 	doc,
 	setDoc,
-	updateDoc,
+
 	firestore,
-	ref,
+
 	auth,
 	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	sendPasswordResetEmail,
-	getAuth,
-	updatePassword,
-	EmailAuthProvider,
-	reauthenticateWithCredential,
-	signOut,
-	onAuthStateChanged,
-	updateProfile,
-	uploadBytes,
-	getDownloadURL,
+
 } from "./auth.js";
 import Toast from "./toast.js";
+import { LocalStorage } from "./storage.js";
 const validate = new Validator("#form-signup");
 validate.validate();
+let userInfoStorage = LocalStorage("infor_user");
+if (!userInfoStorage.isEmpty()) {
+	window.location.href = window.location.origin + "/index.html";
+}
 validate.onSubmit = async function (data) {
 	try {
 		const credentials = await createUserWithEmailAndPassword(auth, data.email, data.password);
@@ -33,12 +27,11 @@ validate.onSubmit = async function (data) {
 			data: JSON.stringify({ products: [], likeProducts: [] }),
 		});
 		await new Toast({
-			message:
-				"Your account has been created successfully. Redirect to homepage",
+			message: "Your account has been created successfully. Redirect to homepage",
 			type: "success",
 			absoluteEl: document.querySelector(".pop-up"),
 		}).init();
-		window.location.href = window.location.origin + "/pages/login_page.html"
+		window.location.href = window.location.origin + "/pages/login_page.html";
 	} catch (error) {
 		console.error(error);
 		if (error.code === "auth/email-already-in-use") {
