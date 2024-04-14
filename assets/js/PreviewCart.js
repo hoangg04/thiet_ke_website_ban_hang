@@ -55,7 +55,7 @@ function PreviewCart() {
 				<p>$${total}</p>
 			</div>
 			<div class="mt-6">
-				<a href="/#/checkout" class="flex items-center justify-center rounded-md border border-transparent bg-green-active px-6 py-3 text-base font-medium text-white shadow-sm hover:opacity-90 el__match--route">Checkout</a>
+				<a href="${window.location.origin}/pages/checkout_page.html" class="flex items-center justify-center rounded-md border border-transparent bg-green-active px-6 py-3 text-base font-medium text-white shadow-sm hover:opacity-90 el__match--route">Checkout</a>
 			</div>
 			<div class="mt-6 flex justify-center text-center text-sm text-gray-500">
 				<p>
@@ -70,6 +70,7 @@ function PreviewCart() {
 	</div>
 	`;
 }
-
-document.querySelector(".preview_cart").innerHTML = PreviewCart();
+if(document.querySelector(".preview_cart")){
+	document.querySelector(".preview_cart").innerHTML = PreviewCart();
+}
 export default PreviewCart;

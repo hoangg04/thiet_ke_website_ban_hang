@@ -78,7 +78,7 @@ class Validator {
 			}
 			let _this = this;
 			function handleValidate(event) {
-				let message = "";
+				let message = null;
 				_this.formRules[event.target.name].some((rule) => {
 					message = rule(event.target.value);
 					return message;
@@ -87,12 +87,14 @@ class Validator {
 					_this
 						.getParentSelect(this || event.target, ".form-group")
 						.querySelector(".form-message").innerText = message;
+					_this.getParentSelect(this || event.target, ".form-group").classList.remove("valid");
 					_this.getParentSelect(this || event.target, ".form-group").classList.add("invalid");
 				} else {
 					_this
 						.getParentSelect(this || event.target, ".form-group")
 						.querySelector(".form-message").innerText = "";
 					_this.getParentSelect(this || event.target, ".form-group").classList.remove("invalid");
+					_this.getParentSelect(this || event.target, ".form-group").classList.add("valid");
 				}
 				return message ? 1 : 0;
 			}
@@ -142,8 +144,3 @@ class Validator {
 		}
 	}
 }
-
-// con xu li checkbox radio file ..... mai chien tiep
-
-// giờ phải xử lí như nào đây
-// nó đéo như tytpe 1

@@ -11,77 +11,112 @@
 			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
 		></script>
 		<link rel="stylesheet" href="../assets/css/style.css" />
-		<link rel="stylesheet" href="../assets/css/form.css" />
+		<link rel="stylesheet" href="../assets/css/output.css" />
 	</head>
 	<body>
 		<header></header>
 		<main>
 			<div
-				class="mx-auto mt-[60px] flex max-w-2xl items-center justify-center overflow-hidden rounded-lg bg-white px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+				class="mx-auto mt-[100px] flex max-w-2xl items-center justify-center overflow-hidden rounded-lg bg-white px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
 			>
 				<div class="w-full p-8 lg:w-1/2">
-					<h2 class="text-center text-2xl font-semibold text-green-active">Login</h2>
-					<form id="form-login">
+					<h2 class="text-center text-2xl font-semibold text-green-active">Sign Up</h2>
+					<form id="form-signup">
 						<div class="form-group group mb-4 flex flex-col">
-							<label for="username" class="form-label">Email</label>
+							<label for="fullName" class="form-label">Enter your name</label>
+
 							<input
 								type="text"
-								id="email"
+								name="fullName"
+								class="w-full outline-none text-[#212529] h-[40px] px-3 py-2 border-[#ced4da] border rounded-lg text-base mt-2 group-[.invalid]:text-red-500 group-[.invalid]:border-red-500 group-[.valid]:text-green-active group-[.valid]:border-green-active form-control"
+								placeholder="Enter your name"
+								autocomplete=""
+								value=""
+								rules="required"
+							/>
+
+							<span
+								class="form-message text-[12px] group-[.invalid]:text-red-500 group-[.valid]:text-green-active"
+							></span>
+						</div>
+
+						<div class="form-group group mb-4 flex flex-col">
+							<label for="email" class="form-label">Enter your email</label>
+
+							<input
+								type="email"
 								name="email"
-								class="form-control"
+								class="w-full outline-none text-[#212529] h-[40px] px-3 py-2 border-[#ced4da] border rounded-lg text-base mt-2 group-[.invalid]:text-red-500 group-[.invalid]:border-red-500 group-[.valid]:text-green-active group-[.valid]:border-green-active -full form-control"
+								placeholder="Enter your email"
+								autocomplete=""
+								value=""
 								rules="required|email"
 							/>
-							<span class="form-message"></span>
+
+							<span
+								class="form-message text-[12px] group-[.invalid]:text-red-500 group-[.valid]:text-green-active"
+							></span>
 						</div>
+
 						<div class="form-group group mb-4 flex flex-col">
-							<label for="password" class="form-label">Password</label>
+							<label for="password" class="form-label">Enter your password</label>
+
 							<input
 								type="password"
-								id="password"
-								class="form-control"
 								name="password"
+								class="w-full outline-none text-[#212529] h-[40px] px-3 py-2 border-[#ced4da] border rounded-lg text-base mt-2 group-[.invalid]:text-red-500 group-[.invalid]:border-red-500 group-[.valid]:text-green-active group-[.valid]:border-green-active form-control"
+								placeholder="Enter your password"
+								autocomplete=""
+								value=""
 								rules="required|min:6|max:30|password"
 							/>
-							<span class="form-message"></span>
+
+							<span
+								class="form-message text-[12px] group-[.invalid]:text-red-500 group-[.valid]:text-green-active"
+							></span>
 						</div>
+
 						<div class="form-group group mb-4 flex flex-col">
-							<label for="password" class="form-label">Confirm password</label>
+							<label for="confirmPassword" class="form-label">Confirm your password</label>
+
 							<input
 								type="password"
-								id="confirm_password"
-								class="form-control"
-								name="confirm_password"
-								rules="required|min:6|max:30|password|confirm"
+								name="confirmPassword"
+								class="w-full outline-none text-[#212529] h-[40px] px-3 py-2 border-[#ced4da] border rounded-lg text-base mt-2 group-[.invalid]:text-red-500 group-[.invalid]:border-red-500 group-[.valid]:text-green-active group-[.valid]:border-green-active form-control"
+								placeholder="Confirm your password"
+								autocomplete=""
+								value=""
+								rules="required|confirm"
 							/>
-							<span class="form-message"></span>
+
+							<span
+								class="form-message text-[12px] group-[.invalid]:text-red-500 group-[.valid]:text-green-active"
+							></span>
 						</div>
-						<div class="mt-8 ">
+
+						<div class="mt-8">
 							<button
-								class="w-full rounded bg-green-active form-submit text-md text-white hover:opacity-90 transition duration-300"
-								name="login"
+								class="text-md w-full rounded bg-green-active px-4 py-2 text-white transition duration-300 hover:opacity-90"
+								name="signup"
 							>
 								Sign Up
 							</button>
 						</div>
 					</form>
-					<div class="mt-4 flex items-center flex-col justify-center gap-3 ">
-						<a href="login_page.html" class="text-sm text-gray-500 el__match--route"
-							>or <span class="text-green-active">Login</span></a
+					<div class="mt-4 flex items-center justify-center">
+						<a href="login_page.html" class="el__match--route text-base text-gray-500"
+							>(Or <span class="text-green-active">login</span> if you already have an account).</a
 						>
 					</div>
 				</div>
 			</div>
-			`;
 		</main>
 		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
 		<script type="module" src="../assets/js/Header.js"></script>
 		<script src="../assets/js/Footer.js"></script>
 		<script type="module" src="../assets/js/index.js"></script>
 		<script src="../assets/js/validator.js"></script>
-		
-		<script>
-			const validate = new Validator("#form-login");
-			validate.validate();
-		</script>
+		<script type="module" src="../assets/js/signup_page.js"></script>
+
 	</body>
 </html>

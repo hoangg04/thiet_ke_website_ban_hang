@@ -1,5 +1,6 @@
 import { LocalStorage } from "./storage.js";
 import PreviewCart from "./PreviewCart.js";
+import Toast from "./toast.js";
 function renderProduct(content, id) {
 	fetch(`https://product-api-qngh.onrender.com/products/${id}`, {
 		method: "GET",
@@ -144,7 +145,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	let currentId = window.location.hash.slice(1) === "" ? 1001 : window.location.hash.slice(1);
 	const content = document.querySelector("main");
 	renderProduct(content, currentId);
-	content.addEventListener("click", (e) => {
+	content.addEventListener("click", async (e) => {
 		let increment_button = e.target.closest(".increment__count--items");
 		let decrement_button = e.target.closest(".decrement__count--items");
 		let add_product = e.target.closest(".btn__add--product");
@@ -164,29 +165,45 @@ window.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 		if (add_product) {
-			let userInfoStorage = LocalStorage("infor_user");
-			let data = null;
-			if (userInfoStorage.isEmpty()) {
-				data = {
-					products: [],
-					likes_products: [],
-				};
-			} else {
-				data = userInfoStorage.get("data");
+			try {
+				if (!localStorage.getItem("infor_user")) {
+					throw new Error("Please login to continue");
+				}
+				let userInfoStorage = LocalStorage("infor_user");
+				let data = null;
+				if (userInfoStorage.isEmpty()) {
+					data = {
+						products: [],
+						likes_products: [],
+					};
+				} else {
+					data = userInfoStorage.get("data");
+				}
+				let currentProduct = JSON.parse(sessionStorage.getItem("currentProduct"));
+				const countItems = document.querySelector(".countItems");
+				let indexItem = data.products.findIndex((item) => item.id === currentProduct.id);
+				if (indexItem >= 0) {
+					data.products[indexItem].count += parseInt(countItems.innerText);
+				} else {
+					data.products.push({
+						...currentProduct,
+						count: parseInt(countItems.innerText),
+					});
+				}
+				userInfoStorage.set("data", data);
+				new Toast({
+					message: "Add product to cart sussecsfully",
+					type: "success",
+					absoluteEl: document.querySelector(".pop-up"),
+				}).init();
+				document.querySelector(".preview_cart").innerHTML = PreviewCart();
+			} catch (e) {
+				new Toast({
+					message: e.message,
+					type: "error",
+					absoluteEl: document.querySelector(".pop-up"),
+				}).init();
 			}
-			let currentProduct = JSON.parse(sessionStorage.getItem("currentProduct"));
-			const countItems = document.querySelector(".countItems");
-			let indexItem = data.products.findIndex((item) => item.id === currentProduct.id);
-			if (indexItem >= 0) {
-				data.products[indexItem].count += parseInt(countItems.innerText);
-			} else {
-				data.products.push({
-					...currentProduct,
-					count: parseInt(countItems.innerText),
-				});
-			}
-			userInfoStorage.set("data", data);
-			document.querySelector(".preview_cart").innerHTML = PreviewCart();
 		}
 	});
 });

@@ -10,6 +10,9 @@ header {
 	height: 60px;
 	background-color: #E3E6F3;
 }
+html{
+	font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 @media (min-width: 768px) {
 	header {

@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Checkout page</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-	<header></header>
-	<main></main>
-	<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
-	<div class="preview_cart pointer-events-auto z-20 fixed inset-y-0 right-0 mt-[60px] w-screen max-w-md flex-col overflow-hidden hidden"></div>
-	<script type="module" src="../assets/js/Header.js"></script>
-	<script src="../assets/js/Footer.js"></script>
-	<script type="module" src="../assets/js/index.js"></script>
-	<script type="module" src="../assets/js/PreviewCart.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Checkout page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/output.css">
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div class="container mx-auto h-full px-4 mt-[60px]">
+				<h1 class="mb-4 text-2xl font-semibold">Shopping Cart</h1>
+				<div class="flex h-full flex-col gap-4 lg:flex-row">
+					<div class="overflow-x-hidden overflow-y-scroll p-3 lg:w-3/4 min-h-50 content-products">
+						
+					</div>
+					<div class="lg:w-1/4">
+						<div class="rounded-lg bg-white p-6 shadow-md">
+							<h2 class="mb-4 text-lg font-semibold">Summary</h2>
+							<div class="mb-2 flex justify-between">
+								<span>Subtotal</span>
+								<span class="subtotal_price"></span>
+							</div>
+							<div class="mb-2 flex justify-between">
+								<span>Taxes</span>
+								<span>$2.00</span>
+							</div>
+							<div class="mb-2 flex justify-between">
+								<span>Shipping</span>
+								<span>$30.00</span>
+							</div>
+							<div>
+								<label for="promo" class="text-sm font-medium">Discount</label>
+								<input
+									type="text"
+									name="promo"
+									id="promo"
+									class="w-full rounded-lg border border-gray-200 p-2 mt-1"
+								/>
+								<hr class="my-2" />
+								<div class="mb-2 flex justify-between">
+									<span class="font-semibold">Total</span>
+									<span class="font-semibold total_price"></span>
+								</div>
+								<button
+									class="mt-4 w-full rounded-lg bg-green-active hover:opacity-90 px-4 py-2 text-white"
+								>
+									Pay
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
+		<div
+			class="preview_cart pointer-events-auto z-20 fixed inset-y-0 right-0 mt-[60px] w-screen max-w-md flex-col overflow-hidden hidden"
+		></div>
+		<script type="module" src="../assets/js/Header.js"></script>
+		<script src="../assets/js/Footer.js"></script>
+		<script type="module" src="../assets/js/index.js"></script>
+		<script type="module" src="../assets/js/PreviewCart.js"></script>
+		<script type="module" src="../assets/js/checkout_page.js"></script>
+	</body>
 </html>
