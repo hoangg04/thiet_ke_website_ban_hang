@@ -29,7 +29,7 @@ function PreviewCart() {
 							<div>
 								<div class="flex justify-between text-base font-medium text-gray-900">
 									<h3>
-										<a href="/#/detail-product/1002" class="el__match--route" "="">${
+										<a href="/detail-product/1002" class="el__match--route" "="">${
 											product.title[0].toUpperCase() + product.title.slice(1)
 										}</a>
 									</h3>

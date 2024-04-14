@@ -61,7 +61,7 @@ function Footer() {
             <div class="mb-6">
               <a
                 class="flex h-full flex-shrink-0 flex-grow-0 items-center justify-start"
-                href="/src/#"
+                href="#"
               >
                 <img src="${window.location.origin}/assets/images/logo.png" alt="logo" />
               </a>
