@@ -8,6 +8,16 @@
 - CSS
 - Javascript
 - Firebase
+#### Các chức năng chính
+- Dùng firebase kết hợp với storage của trình duyệt để lưu thông tin người dùng
+- Lọc sản phẩm theo danh mục
+- Thêm sản phẩm vào giỏ hàng
+- Xóa sản phẩm khỏi giỏ hàng
+- Đăng nhập
+- Đăng kí
+- Phân trang sản phẩm
+- Call api render giao diện
+- Toast thông báo
 #### Thành viên trong nhóm
 - Đỗ Trọng Hoàng ( 2022604369 ) **( Nhóm trưởng )** : chịu trách nhiệm tạo api, xử lý js cho toàn bộ trang web , deploy sản phẩm
 - Lê Anh Tạo ( 2022605301 ) : Thiết kế trang shop page (xử lý html css ,reponsive )
