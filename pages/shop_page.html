@@ -128,27 +128,18 @@
 					</div>
 
 					<button
-						class="item submit flex h-full w-max flex-shrink-0 flex-grow-0 items-center justify-center rounded-lg bg-green-active px-7 py-3 text-white"
+						class="item search-product flex h-full w-max flex-shrink-0 flex-grow-0 items-center justify-center rounded-lg bg-green-active px-7 py-3 text-white"
 					>
 						Search
 					</button>
 				</form>
 
-				<div class="title">Customers also purchased</div>
-				<div class="content">
-					<div class="content1">
+				<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+					<div class="title">Customers also purchased</div>
+					<div
+						class="content1 mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+					>
 						Loading
-						<!-- <div class="content2">
-							<div class="background">
-								<img class="img" src="/assets/images/img_shop_page/iphone15.jpg" alt="sản phẩm" />
-								<p class="phonename">Iphone 15</p>
-								<p><span class="money">$1600.99</span> $1500.99</p>
-								<div class="content_swap">
-									<div class="circle"></div>
-									<div class="nd">Apple</div>
-								</div>
-							</div>
-						</div> -->
 					</div>
 				</div>
 				<nav
@@ -157,8 +148,7 @@
 				>
 					<div class="isolate inline-flex h-10 gap-2 -space-x-px rounded-md">
 						<button
-							class=" prev-page relative flex h-10 w-10 items-center justify-center rounded-l-md px-2 py-2 text-dark"
-							
+							class="prev-page relative flex h-10 w-10 items-center justify-center rounded-l-md px-2 py-2 text-dark"
 						>
 							<span><img src="../assets/icons/back.svg" /></span>
 						</button>
@@ -176,9 +166,11 @@
 			</div>
 		</main>
 		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
-		<script src="../assets/js/shop_page.js"></script>
-		<script src="../assets/js/Header.js"></script>
+		<div class="preview_cart pointer-events-auto z-20 fixed inset-y-0 right-0 mt-[60px] w-screen max-w-md flex-col overflow-hidden hidden"></div>
+		<script type="module" src="../assets/js/Header.js"></script>
 		<script src="../assets/js/Footer.js"></script>
-		<script src="../assets/js/index.js"></script>
+		<script type="module" src="../assets/js/index.js"></script>
+		<script type="module" src="../assets/js/shop_page.js"></script>
+		<script type="module" src="../assets/js/PreviewCart.js"></script>
 	</body>
 </html>

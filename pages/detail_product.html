@@ -1,87 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Detail product</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/detail_page.css" />
+		<link rel="stylesheet" href="../assets/css/output.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Detail product </title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<link rel="stylesheet" href="../assets/css/style.css">
-	<link rel="stylesheet" href="../assets/css/detail_page.css">
-	<link rel="stylesheet" href="../assets/images/fontawesome-free-6.5.2-web/css/all.css">
-</head>
-
-<body>
-	<main>
+	<body>
 		<header></header>
-		<div class="product" id="product-container">
-			<div class="picture">
-				<img src="../assets/images/img_shop_page/iphone15.jpg" alt="">
-			</div>
-			<div>
-				<h4 id="bold">IPHONE 15</h4>
-				<p>giá</p>
-				<div class="star-1">
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-solid fa-star"></i>
-					<i class="fa-regular fa-star"></i>
-					<i class="fa-regular fa-star"></i>
-					<span>
-						<p> <span id="randomNumber"></span> <span id="hover-blue">reviews</span></p>
-
-						<script>
-							// Tạo số ngẫu nhiên từ 100 đến 5000
-							const randomNumber = Math.floor(Math.random() * 4900) + 100;
-
-							// Hiển thị số ngẫu nhiên trong phần tử có id="randomNumber"
-							document.getElementById("randomNumber").innerText = randomNumber;
-						</script>
-					</span>
-				</div>
-				<div class="wrapper">
-					<span class="minus2">-</span>
-					<span class="num2">01</span>
-					<span class="plus2">+</span>
-				</div>
-				<div class="cart">Add to cart</div>
-				<div class="written">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-					voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-
-			</div>
-		</div>
-	</main>
-
-	<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
-	<script src="../assets/js/Header.js"></script>
-	<script src="../assets/js/Footer.js"></script>
-	<script src="../assets/js/index.js"></script>
-	<script src="../assets/js/script.js"></script>
-	<script>
-		const plusBtn = document.querySelector(".plus2"),
-			minusBtn = document.querySelector(".minus2"),
-			numOfProd = document.querySelector(".num2");
-		let init_countProd = 1;
-		plusBtn.addEventListener("click", (e) => {
-			console.log(e);
-			init_countProd++;
-			init_countProd =
-				init_countProd < 10 ? "0" + init_countProd : init_countProd;
-			numOfProd.innerText = init_countProd;
-		});
-		minusBtn.addEventListener("click", () => {
-			if (init_countProd > 1) {
-				init_countProd--;
-				init_countProd = init_countProd < 10 ? "0" + init_countProd : init_countProd;
-				numOfProd.innerText = init_countProd;
-			}
-		});
-	</script>
-	
-</body>
-
+		<main></main>
+		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
+		<div
+			class="preview_cart pointer-events-auto z-20 fixed inset-y-0 right-0 mt-[60px] w-screen max-w-md flex-col overflow-hidden hidden"
+		></div>
+		<script type="module" src="../assets/js/Header.js"></script>
+		<script src="../assets/js/Footer.js"></script>
+		<script type="module" src="../assets/js/index.js"></script>
+		<script type="module" src="../assets/js/detail_page.js"></script>
+		<script type="module" src="../assets/js/PreviewCart.js"></script>
+		<script></script>
+	</body>
 </html>

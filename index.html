@@ -1,88 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home page</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-	<link rel="stylesheet" href="./assets/css/style.css">
-	<link rel="stylesheet" href="./assets/css/home_page.css">
-</head>
-<body>
-	<header></header>
-	<main>
-		    	<div id="introduce">
-					
-					<img src="assets/images/img_home_page/Capture.PNG"> 
-					<h1><b>Welcome to the shop </b><br>
-						<p style="color:black"><mark>Discover the latest features and innovations in the world of smartphones right here. Stay ahead in the tech game with our collection of cutting-edge devices that promise to enhance your digital lifestyle. </m></p>
-							<a class="1" href="pages/shop_page.html" download>Shop now</a>
-							<a href="index.html" download>Explore</a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/home_page.css" />
+		<link rel="stylesheet" href="./assets/css/output.css" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div
+				class="bg-primary-light md:bg-[url('../assets/images/herocontent.png')] bg-no-repeat md:bg-right bg-center mt-[60px]"
+			>
+				<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+					<div class="text-center">
+						<h1 class="text-4xl font-bold tracking-tight text-green-active sm:text-6xl">
+							Welcome to the shop
 						</h1>
-                	
+						<p class="mt-6 text-lg leading-8 text-dark text-shadow bg-[#ffffff85]">
+							Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
+							commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+						</p>
+						<div class="mt-10 flex items-center justify-center gap-x-6">
+							<a
+								href="#"
+								class="rounded-md bg-green-active px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-active focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:bg-green-active el__match--route"
+								>Shop now</a
+							>
+							<a href="#" class="text-sm font-semibold leading-6 text-gray-900 el__match--route"
+								>Explore
+							</a>
+						</div>
+					</div>
 				</div>
+			</div>
+			<div class="preview_products mx-auto container py-[100px] xl:max-w-[1200px] md:px-5">
+				<div class="flex flex-col md:flex-row gap-5">
+					<!-- Start Column 1 -->
+					<div class="flex-1">
+						<h2 class="mb-6 text-3xl font-medium">Feature Products</h2>
+						<p class="mb-6 text-sm">
+							Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+							vulputate velit imperdiet dolor tempor tristique.
+						</p>
+						<a
+							href="#"
+							class="inline-flex items-center rounded-md bg-dark px-4 py-2 text-md font-medium cursor-pointer text-white"
+							>Explore</a
+						>
+					</div>
 
-				<div id="fp" >
-					<table style="margin-left: auto; margin-right: auto;text-align:left;flex-wrap: wrap;">
-						<tr>
-							<td style="height: 200px;font-size: 16px;width: 400px;line-height: 30px;padding: 50px;"><p style="font-size: 30px;"><b>Feature Products</b></p>
-								<br><p>Welcome to our diverse selection of feature products designed to elevate your lifestyle! Discover a range of top-tier items that are curated to meet your every need with style, functionality, and quality in mind.
+					<div class="flex-1">
+						<a
+							href="./pages/detail_product.html#1001"
+							class="group/item relative flex flex-col items-center justify-center pb-[50px] before:absolute before:bottom-0 before:left-0 before:right-0 before:z-[-1] before:block before:h-[0%] before:w-full before:rounded-lg before:bg-primary-light before:transition-[height] before:duration-150 before:ease-linear hover:before:h-[30%] product__item"
+						>
+							<img
+								src="https://i.ibb.co/p3s01cP/iphone15.jpg"
+								alt="Product 1"
+								class="relative top-0 mb-6 h-auto max-h-[300px] w-full object-contain transition-all group-hover/item:top-[-10px]"
+							/>
+							<h3 class="mb-1 text-lg font-semibold text-dark">Iphone 15</h3>
+							<strong class="block text-dark">$1500.99</strong>
+							<span
+								class="invisible absolute bottom-[-15px] left-1/2 flex h-[35px] w-[35px] translate-x-[-50%] items-center justify-center rounded-full bg-dark opacity-0 transition-all duration-300 group-hover/item:visible group-hover/item:bottom-[0px] group-hover/item:opacity-100"
+							>
+								<img src="./assets/icons/cross.svg" class="w-[18px] object-cover" />
+							</span>
+						</a>
+					</div>
+
+					<div class="flex-1">
+						<a
+							href="./pages/detail_product.html#1002"
+							class="group/item relative flex flex-col items-center justify-center pb-[50px] before:absolute before:bottom-0 before:left-0 before:right-0 before:z-[-1] before:block before:h-[0%] before:w-full before:rounded-lg before:bg-primary-light before:transition-[height] before:duration-150 before:ease-linear hover:before:h-[30%] product__item"
+						>
+							<img
+								src="https://i.ibb.co/HD4JCrk/iphone2.jpg"
+								alt="Product 1"
+								class="relative top-0 mb-6 h-auto max-h-[300px] w-full object-contain transition-all group-hover/item:top-[-10px]"
+							/>
+							<h3 class="mb-1 text-lg font-semibold text-dark">Iphone 14</h3>
+							<strong class="block text-dark">$1150.99</strong>
+							<span
+								class="invisible absolute bottom-[-15px] left-1/2 flex h-[35px] w-[35px] translate-x-[-50%] items-center justify-center rounded-full bg-dark opacity-0 transition-all duration-300 group-hover/item:visible group-hover/item:bottom-[0px] group-hover/item:opacity-100"
+							>
+								<img src="./assets/icons/cross.svg" class="w-[18px] object-cover" />
+							</span>
+						</a>
+					</div>
+
+					<div class="flex-1">
+						<a
+							href="./pages/detail_product.html#1003"
+							class="group/item relative flex flex-col items-center justify-center pb-[50px] before:absolute before:bottom-0 before:left-0 before:right-0 before:z-[-1] before:block before:h-[0%] before:w-full before:rounded-lg before:bg-primary-light before:transition-[height] before:duration-150 before:ease-linear hover:before:h-[30%] product__item"
+						>
+							<img
+								src="https://i.ibb.co/51LfwZ3/iphone3.jpg"
+								alt="Product 1"
+								class="relative top-0 mb-6 h-auto max-h-[300px] w-full object-contain transition-all group-hover/item:top-[-10px]"
+							/>
+							<h3 class="mb-1 text-lg font-semibold text-dark">Iphone New</h3>
+							<strong class="block text-dark">$1100</strong>
+							<span
+								class="invisible absolute bottom-[-15px] left-1/2 flex h-[35px] w-[35px] translate-x-[-50%] items-center justify-center rounded-full bg-dark opacity-0 transition-all duration-300 group-hover/item:visible group-hover/item:bottom-[0px] group-hover/item:opacity-100"
+							>
+								<img src="./assets/icons/cross.svg" class="w-[18px] object-cover" />
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="container mx-auto py-[100px] xl:max-w-[1200px] md:p-5 mt-[100px]">
+				<div class="flex justify-between flex-col lg:flex-row">
+					<div class="w-full lg:w-1/2 p-3 md:p-0">
+						<h2 class="section-title text-4xl mb-5">Why Choose Us</h2>
+						<p class="mb-4 text-sm text-[#6a6a6a]">
+							Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+							vulputate velit imperdiet dolor tempor tristique.
+						</p>
+						<div class="my-5 flex flex-col sm:flex-row justify-center md:justify-start flex-wrap">
+							<div class="w-full sm:w-1/2 p-4">
+								<div class="mb-7">
+									<div
+										class="w-[46px] relative mt-5 before:w-[33px] before:h-[33px] before:absolute before:bg-[rgba(59,93,80,0.2)] before:rounded-full before:right-[-8px] before:bottom-0"
+									>
+										<img src="./assets/icons/truck.svg" alt="Image" class="w-full object-cover" />
+									</div>
+									<h3 class="mb-2 text-sm font-dark">Fast &amp; Free Shipping</h3>
+									<p class="mb-4 text-sm text-[#6a6a6a]">
+										Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+										vulputate.
 									</p>
-								
-								<a style="background-color: rgb(17, 19, 19); color: white;" href="index.html" download>Explore</a>
-							</td>
-							<td id="1"><a href="pages/checkout_page.html">
-								<img src="assets/images/img_home_page/Capture6.PNG"><br>
-								<b>Iphone 15<br>								
-									$1500.99</b></a>
-							</td>
-							<td id="1"><a href="pages/checkout_page.html">
-								<img src="assets/images/img_home_page/Capture7.PNG"><br>
-								<b>Iphone 14<br>
-									$1150.99</b></a>
-							</td>
-							<td></td>
-							<td id="1"> <a href="pages/checkout_page.html">
-								<img src="assets/images/img_home_page/Capture8.PNG"><br>
-								<b>Iphone New<br>								
-								$1100</b></a>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2" style="width: 400px;"><p style="font-size:30px ;"><b>Why Choose Us</b></p>
-								<p>Your Premier Destination for Exceptional Services</p>
-							</td>
-							<td>
-							</td>
-							<td rowspan="3" ><img src="assets/images/img_home_page/Capture5.PNG" style="height: 500px;width: 400px;"></td>
-						</tr>
-						<tr>
-							<td style="width: 400px;"><img src="assets/images/img_home_page/Capture1.PNG"><br><p1><b id="1">Fast & Free Shipping</b></p1>
-                                <br><p2>Looking for a hassle-free shopping experience? Enjoy our lightning-fast shipping service with no extra cost! </p2>
-							</td>
-							<td style="width: 400px;"><img src="assets/images/img_home_page/Capture2.PNG"><br><p1><b id="1">Easy to Shop</b></p1>
-                                <br><p2>Simplify your shopping journey with our user-friendly platform, designed to make your experience effortless and enjoyable!</p2>
-							</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td style="width: 400px;"><img src="assets/images/img_home_page/Capture3.PNG"><br><p1><b id="1">24/7 Support</b></p1>
-                                <br><p2>Need help at any hour of the day? Our dedicated support team is here for you 24/7, ready to assist with any inquiries or concerns you may have!  </p2>
-							</td>
-							<td style="width: 400px;"><img src="assets/images/img_home_page/Capture4.PNG"><br><p1><b id="1">Hassle Free Returns</b></p1>
-                                <br><p2>No more dealing with complicated return procedures. Simply follow our straightforward return instructions and send back your items hassle-free. Your satisfaction is our priority! </p2>
-							</td>
-							<td></td>
-						</tr>
-					</table>
-                    
-                </div>
-	</main>
-	<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
-	<script src="./assets/js/Header.js"></script>
-	<script src="./assets/js/Footer.js"></script>
-	<script src="./assets/js/index.js"></script>
-</body>
+								</div>
+							</div>
+
+							<div class="w-full sm:w-1/2 p-4">
+								<div class="mb-7">
+									<div
+										class="w-[46px] relative mt-5 before:w-[33px] before:h-[33px] before:absolute before:bg-[rgba(59,93,80,0.2)] before:rounded-full before:right-[-8px] before:bottom-0"
+									>
+										<img src="./assets/icons/bag.svg" alt="Image" class="w-full object-cover" />
+									</div>
+									<h3 class="mb-2 text-sm font-dark">Easy to Shop</h3>
+									<p class="mb-4 text-sm text-[#6a6a6a]">
+										Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+										vulputate.
+									</p>
+								</div>
+							</div>
+
+							<div class="w-full sm:w-1/2 p-4">
+								<div class="mb-7">
+									<div
+										class="w-[46px] relative mt-5 before:w-[33px] before:h-[33px] before:absolute before:bg-[rgba(59,93,80,0.2)] before:rounded-full before:right-[-8px] before:bottom-0"
+									>
+										<img src="./assets/icons/support.svg" alt="Image" class="w-full object-cover" />
+									</div>
+									<h3 class="mb-2 text-sm font-dark">24/7 Support</h3>
+									<p class="mb-4 text-sm text-[#6a6a6a]">
+										Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+										vulputate.
+									</p>
+								</div>
+							</div>
+
+							<div class="w-full sm:w-1/2 p-4">
+								<div class="mb-7">
+									<div
+										class="w-[46px] relative mt-5 before:w-[33px] before:h-[33px] before:absolute before:bg-[rgba(59,93,80,0.2)] before:rounded-full before:right-[-8px] before:bottom-0"
+									>
+										<img src="./assets/icons/return.svg" alt="Image" class="w-full object-cover" />
+									</div>
+									<h3 class="mb-2 text-sm font-dark">Hassle Free Returns</h3>
+									<p class="mb-4 text-sm text-[#6a6a6a]">
+										Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+										vulputate.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-full lg:w-5/12 p-3 md:p-0 mt-[70px] lg:mt-0 h-full">
+						<div
+							class="before:z-[-1] relative before:w-[255px] before:h-[217px] before:absolute before:bg-[url('./assets/images/dots-yellow.svg')] before:top-[-80px] before:sm:left-[-40px] before:lg:left-[-80px] before:left-0 before:bottom-0 before:bg-no-repeat px-5 lg:px-0"
+						>
+							<img
+								src="./assets/images/why-choose-us-img.jpg"
+								alt="Image"
+								class="w-full rounded-xl"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="container mx-auto pb-5 pt-[100px] md:px-5 xl:max-w-[1200px]"></footer>
+		<div
+			class="preview_cart pointer-events-auto z-20 fixed inset-y-0 right-0 mt-[60px] w-screen max-w-md flex-col overflow-hidden hidden"
+		></div>
+		<script type="module" src="./assets/js/Header.js"></script>
+		<script src="./assets/js/Footer.js"></script>
+		<script type="module" src="./assets/js/index.js"></script>
+		<script type="module" src="./assets/js/PreviewCart.js"></script>
+	</body>
 </html>

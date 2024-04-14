@@ -1,3 +1,4 @@
+import { LocalStorage } from "./storage.js";
 const linkActions = [
 	{
 		title: "Home",
@@ -9,7 +10,8 @@ const linkActions = [
 	},
 ];
 function Header() {
-  
+  let userInfoStorage = LocalStorage("infor_user");
+
 	return `
       <a
         class="el__match--route flex h-full flex-shrink-0 flex-grow-0 items-center justify-center"
@@ -43,8 +45,8 @@ function Header() {
           class="font-sm relative mr-2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center md:m-0 toggle_preview-cart"
         >
           <span
-            class="absolute right-[-4px] top-0 z-50 h-[15px] w-[15px] rounded-full bg-red-500 text-center text-[11px] leading-[15px] text-white"
-            >1</span
+            class="absolute right-[-4px] top-0 z-50 h-[15px] w-[15px] rounded-full bg-red-500 text-center text-[11px] leading-[15px] text-white count_products"
+            >${userInfoStorage.isEmpty() ? 0 : userInfoStorage.get("data").products.length}</span
           >
           <ion-icon
             name="cart-outline"

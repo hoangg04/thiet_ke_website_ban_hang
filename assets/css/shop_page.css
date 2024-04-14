@@ -23,14 +23,14 @@
     padding-top: 1px;
 }
 
-.img {
+/* .img {
     width: 266px;
     height: 315.42px;
     margin: 12px;
     overflow: hidden;
     border-radius: 4%;
 
-}
+} */
 
 .phonename {
     color: white;
@@ -72,22 +72,6 @@
     text-align: center;
 }
 
-.content {
-    margin: 100px auto 0;
-}
-
-.content1 {
-    display: grid;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
-}
-
-.content2 {
-    display: flex !important;
-    justify-content: center;
-}
 
 .listPage {
     padding: 10px;
