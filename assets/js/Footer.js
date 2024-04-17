@@ -43,7 +43,7 @@ function Footer() {
                 
                 <div class="h-12">
                   <button
-                    class="flex h-full items-center justify-center rounded-lg bg-green-active px-7 py-3 bg-green-600"
+                    class="flex h-full items-center justify-center rounded-lg bg-green-active px-7 py-3 "
                   >
                     <ion-icon
                       name="paper-plane"
