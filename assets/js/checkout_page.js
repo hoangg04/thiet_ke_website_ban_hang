@@ -11,11 +11,15 @@ function renderProductInCart() {
 	let subtotal_price = document.querySelector(".subtotal_price");
 	let total_price = document.querySelector(".total_price");
 	let total = 0;
+	if (products.length == 0) {
+		subtotal_price.textContent = total;
+		total_price.textContent = 0;
+	}
 	return products
 		.map(function (product) {
 			total += parseFloat(product.price) * parseFloat(product.count);
-			subtotal_price.textContent = total;
-			total_price.textContent = total + 32;
+			subtotal_price.textContent = total.toFixed(2);
+			total_price.textContent = (total + 32).toFixed(2);
 			return `
 			<div class="mb-4 bg-white p-6">
 				<div class="flex py-6">
@@ -41,13 +45,37 @@ function renderProductInCart() {
 							</div>
 							<p class="mt-1 text-sm text-gray-500">${product.brand}</p>
 						</div>
+						<div
+									class="flex flex-row justify-end gap-3 my-2 items-center"
+								>
+									<div class="isolate inline-flex  gap-2 -space-x-px rounded-md">
+										<button
+											class="relative flex h-[30px] w-[30px] items-center justify-center rounded-l-md px-2 py-2 text-dark border-[2px] border-indigo-600 checkout decrement_item" data-id="${
+												product.id
+											}"
+										>
+											<span><img src="../assets/icons/minus.png" /></span>
+										</button>
+										<span
+											class="text-md relative z-10 inline-flex h-[30px] w-[30px] items-center justify-center rounded-md border-[2px] border-indigo-600 font-semibold text-dark checkout count_item"
+											>${product.count}</span
+										>
+										<button
+											class="hover:bg-primary-light bg-white border-indigo-600 border-[2px] relative flex h-[30px] w-[30px] items-center justify-center rounded-r-md px-2 py-2 text-dark checkout increment_item" data-id="${
+												product.id
+											}"
+										>
+											<span><img src="../assets/icons/plus.png" /></span>
+										</button>
+								</div>
+							</div>
 						<div class="flex flex-1 items-end justify-between text-sm">
 							<p class="text-gray-500">Qty ${product.count}</p>
 
 							<div class="flex">
 								<button
 									type="button"
-									class="font-medium text-indigo-600 hover:text-indigo-500 btn__remove--item"
+									class="font-medium text-indigo-600 hover:text-indigo-500 checkout btn__remove--item"
 									data-id="${product.id}"
 								>
 									Remove
@@ -65,18 +93,6 @@ function renderProductInCart() {
 window.addEventListener("DOMContentLoaded", function () {
 	let contentProducts = this.document.querySelector(".content-products");
 	contentProducts.innerHTML = renderProductInCart();
-	contentProducts.addEventListener("click", (e) => {
-		let userInfoStorage = LocalStorage("infor_user");
-		let btn_remove_item = e.target.closest(".btn__remove--item");
-		if (btn_remove_item) {
-			let id = btn_remove_item.dataset.id;
-			let data = userInfoStorage.get("data");
-			let index = data.products.findIndex((item) => item.id == id);
-			if (index >= 0) {
-				data.products.splice(index, 1);
-				userInfoStorage.set("data", data);
-				contentProducts.innerHTML = renderProductInCart();
-			}
-		}
-	});
 });
+
+export default renderProductInCart;
