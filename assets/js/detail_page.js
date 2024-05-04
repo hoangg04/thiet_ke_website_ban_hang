@@ -1,12 +1,7 @@
 import { LocalStorage } from "./storage.js";
 import PreviewCart from "./PreviewCart.js";
 import Toast from "./toast.js";
-import {
-	doc,
-	updateDoc,
-	firestore,
-	getAuth,
-} from "./auth.js";
+import { doc, updateDoc, firestore, getAuth } from "./auth.js";
 function renderProduct(content, id) {
 	fetch(`https://product-api-qngh.onrender.com/products/${id}`, {
 		method: "GET",
@@ -208,11 +203,13 @@ window.addEventListener("DOMContentLoaded", () => {
 				}).init();
 				document.querySelector(".preview_cart").innerHTML = PreviewCart();
 			} catch (e) {
-				new Toast({
+				await new Toast({
 					message: e.message,
 					type: "error",
 					absoluteEl: document.querySelector(".pop-up"),
+					time:1000,
 				}).init();
+				window.location.href = window.location.origin + "/pages/login_page.html";
 			}
 		}
 	});

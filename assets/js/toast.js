@@ -1,5 +1,5 @@
 class Toast {
-	#time = 2000;
+	// #time = 2000;
 	#config = {
 		success: {
 			color: "#4daf54",
@@ -14,13 +14,14 @@ class Toast {
 			backgroundColor: "#c49292",
 		},
 	};
-	constructor({ message, type, absoluteEl }) {
+	constructor({ message, type, absoluteEl, time }) {
 		if (!message || !type) {
 			throw Error("Invalid message or type. Please provide a message or type!");
 		} else {
 			this.message = message;
 			this.type = type;
 			this.absoluteEl = absoluteEl;
+			this.time = time ?? 2000;
 		}
 	}
 	renderToast() {
@@ -49,7 +50,7 @@ class Toast {
 			document.querySelector("body").appendChild(this.absoluteEl);
 		}
 		this.absoluteEl.appendChild(el);
-		await this.delay(this.#time);
+		await this.delay(this.time);
 		el.classList.remove("active_toast");
 		el.classList.add("hide_toast");
 		await this.delay(1100);

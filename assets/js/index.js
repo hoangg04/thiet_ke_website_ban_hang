@@ -1,7 +1,8 @@
 import { LocalStorage } from "./storage.js";
 import PreviewCart from "./PreviewCart.js";
-import renderProductInCart from "./checkout_page.js"
+import renderProductInCart from "./checkout_page.js";
 import { doc, updateDoc, firestore, getAuth } from "./auth.js";
+import Toast from "./toast.js";
 
 document.addEventListener("DOMContentLoaded", function (e) {
 	async function decrement_item_count(element) {
@@ -84,23 +85,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			if (btn_decrement_item) {
 				await decrement_item_count(btn_decrement_item);
 				preview_cart.innerHTML = PreviewCart();
-				content_products.innerHTML = renderProductInCart()
-
+				content_products.innerHTML = renderProductInCart();
 			}
 			if (btn_increment_item) {
 				await increment_item_count(btn_increment_item);
 				preview_cart.innerHTML = PreviewCart();
-				content_products.innerHTML = renderProductInCart()
+				content_products.innerHTML = renderProductInCart();
 			}
 			if (btn_remove_item) {
 				await destroy_item(btn_remove_item);
 				preview_cart.innerHTML = PreviewCart();
-				content_products.innerHTML = renderProductInCart()
+				content_products.innerHTML = renderProductInCart();
 			}
 		});
 	}
 
-	header.addEventListener("click", function (e) {
+	header.addEventListener("click", async function (e) {
 		let menuButton = e.target.closest(".toggle-menu");
 		let toggle_preview_cart = e.target.closest(".toggle_preview-cart");
 		if (menuButton) {
@@ -124,6 +124,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			}
 		}
 		if (toggle_preview_cart && preview_cart) {
+			let userInfoStorage = LocalStorage("infor_user");
+			let data = userInfoStorage.get("data");
+			if (!data) {
+				await new Toast({
+					message: "Please login to view cart!",
+					type: "error",
+					absoluteEl: document.querySelector(".pop-up"),
+					time: 1000,
+				}).init();
+				window.location.href = window.location.origin + "/pages/login_page.html";
+				return
+			}
 			if (!preview_cart.classList.contains("hidden")) {
 				preview_cart.classList.remove("flex");
 				preview_cart.classList.add("hidden");

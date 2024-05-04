@@ -3,7 +3,10 @@ import PreviewCart from "./PreviewCart.js";
 
 function renderProductInCart() {
 	let userInfoStorage = LocalStorage("infor_user");
-	let products = userInfoStorage.get("data").products;
+	let products = [];
+	if (userInfoStorage.get("data")) {
+		products = userInfoStorage.get("data").products;
+	}
 	let header = document.querySelector("header");
 	if (header.querySelector(".count_products")) {
 		header.querySelector(".count_products").textContent = products.length;
@@ -11,7 +14,7 @@ function renderProductInCart() {
 	let subtotal_price = document.querySelector(".subtotal_price");
 	let total_price = document.querySelector(".total_price");
 	let total = 0;
-	if (products.length == 0) {
+	if (products.length == 0 && subtotal_price && total_price) {
 		subtotal_price.textContent = total;
 		total_price.textContent = 0;
 	}
@@ -92,7 +95,9 @@ function renderProductInCart() {
 
 window.addEventListener("DOMContentLoaded", function () {
 	let contentProducts = this.document.querySelector(".content-products");
-	contentProducts.innerHTML = renderProductInCart();
+	if (contentProducts) {
+		contentProducts.innerHTML = renderProductInCart();
+	}
 });
 
 export default renderProductInCart;
