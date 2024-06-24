@@ -13,7 +13,7 @@ function User() {
 	<div class="flex w-full flex-col rounded-lg bg-slate-200 md:w-1/2 p-4">
 		<div class="flex items-center justify-start">
 			<div class="size-[50px] flex-shrink-0 overflow-hidden rounded-full ring-1 ring-black">
-				<img loading="lazy" src="https://source.unsplash.com/random" alt="avatar-Anhanh1kk@" class="w-full h-full object-cover">
+				<img loading="lazy" src="https://picsum.photos/200" alt="avatar-Anhanh1kk@" class="w-full h-full object-cover">
 			</div>
 			<div class="ml-3">
 				<span class="text-md font-medium text-dark">${userInfoStorage.get("fullName")}</span>
